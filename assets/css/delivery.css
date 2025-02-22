@@ -1,0 +1,264 @@
+.delivery-container {
+    padding: 120px 5% 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Title styles */
+.delivery-container h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.8rem;
+    color: #333;
+    position: relative;
+    padding-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.delivery-container h1::before {
+    content: 'DELIVERY';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8rem;
+    color: rgba(0, 0, 0, 0.03);
+    z-index: -1;
+    letter-spacing: 8px;
+    white-space: nowrap;
+}
+
+.delivery-container h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        transparent 0%,
+        #333 20%,
+        #666 50%,
+        #333 80%,
+        transparent 100%
+    );
+    border-radius: 2px;
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+/* Responsive title styles */
+@media screen and (max-width: 768px) {
+    .delivery-container h1 {
+        font-size: 2.2rem;
+    }
+
+    .delivery-container h1::before {
+        font-size: 6rem;
+        top: -15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .delivery-container h1 {
+        font-size: 1.8rem;
+        padding-bottom: 1rem;
+    }
+
+    .delivery-container h1::before {
+        font-size: 4rem;
+        top: -10px;
+    }
+
+    .delivery-container h1::after {
+        width: 80px;
+        height: 3px;
+    }
+}
+
+.delivery-section {
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.delivery-section h2 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.delivery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.delivery-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.delivery-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.delivery-card i {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.delivery-card h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.delivery-card .price {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 1rem;
+}
+
+.areas-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.area {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.area:hover {
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.info-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-content ul li {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.info-content ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #333;
+}
+
+.contact-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-box p {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .delivery-container {
+        padding: 100px 3% 30px;
+    }
+
+    .delivery-container h1 {
+        font-size: 2rem;
+    }
+
+    .delivery-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .delivery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .delivery-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .delivery-card {
+        padding: 1.5rem;
+    }
+
+    .contact-box {
+        padding: 1.5rem;
+    }
+}
+/* Navbar responsive styles */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: rgba(255, 255, 255, 0.98);
+        flex-direction: column;
+        padding: 2rem;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-icons {
+        margin-right: 3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 1rem 3%;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+}
