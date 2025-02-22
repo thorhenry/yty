@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YTY | YESU TELA YOO</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">YESU TELA YOO</div>
+        <!-- Update the nav-links section -->
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="collection.html">Collection</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <!-- In the navbar section -->
+        <div class="nav-icons">
+            <div class="search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="cart-icon">
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search products...">
+            <button class="close-search">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Welcome To YTY</h1>
+            <p>The destination of high-quality, sustainable fashion.</p>
+            <a href="shop.html">
+                <button class="cta-button">Shop Now</button>
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Collection -->
+    <section class="featured" id="collection">
+        <h2>Featured Collection<span>Discover Our Best Sellers</span></h2>
+        <div class="product-grid">
+            <!-- Update each product card button -->
+            <!-- Update each product card button with correct image paths -->
+            <!-- Replace the empty product card with proper content -->
+            <div class="product-card" data-id="1">
+                <img src="assets/images/peach.png" alt="T-Shirts">
+                <h3>T-Shirts</h3>
+                <p>UGX 35,000</p>
+                <button onclick="addToCart({
+                    id: 1,
+                    name: 'T-Shirts',
+                    price: 35000,
+                    image: 'peach.png'
+                })">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="assets/images/long_sleeve_black.png" alt="Long Sleeves">
+                <h3>Long Sleeves</h3>
+                <p>UGX 45,000</p>
+                <button onclick="addToCart({
+                    id: 2,
+                    name: 'Long Sleeves',
+                    price: 45000,
+                    image: 'assets/images/long_sleeve_black.png'
+                })">Add to Cart</button>
+            </div>
+            
+            <!-- Continue for other products with their respective images -->
+            <div class="product-card">
+                <img src="assets/images/yellow_hoodie.png" alt="Hoodies">
+                <h3>Hoodies</h3>
+                <p>UGX 55,000</p>
+                <button onclick="addToCart({
+                    id: 3,
+                    name: 'Hoodies',
+                    price: 55000,
+                    image: 'assets/images/yellow_hoodie.png'
+                })">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/images/collar_white.png" alt="Collar Shirt">
+                <h3>Collar Shirt</h3>
+                <p>UGX 40,000</p>
+                <button onclick="addToCart({
+                    id: 4,
+                    name: 'Collar Shirt',
+                    price: 40000,
+                    image: 'assets/images/collar_white.png'
+                })">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/images/cap.png" alt="Caps">
+                <h3>Caps</h3>
+                <p>UGX 20,000</p>
+                <button onclick="addToCart({
+                    id: 5,
+                    name: 'Caps',
+                    price: 20000,
+                    image: 'assets/images/cap.png'
+                })">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/images/brown_hoodie.png" alt="Jerseys">
+                <h3>Jerseys</h3>
+                <p>UGX 35,000</p>
+                <button onclick="addToCart({
+                    id: 6,
+                    name: 'Jerseys',
+                    price: 35000,
+                    image: 'assets/images/brown_hoodie.png'
+                })">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p class="about-text">
+                YTY is abbreviated from 'Yesu Tela Yoo' which is a mixture of Kiswahili and Acholi language. 'Yesu Tela Yoo' translates in English as 'Jesus Lead My Way'. Founded in 2022, we are a brand that values style, comfort, and ethical production practices...
+                <span class="about-more">we believe that fashion can be both beautiful and responsible, and we are committed to creating clothes that look good and feel good too. Our product range includes a variety of pieces, from everyday essentials to statement pieces, all made with premium materials and expert craftsmanship. Join us on our journey to more sustainable future with fashion that you can feel good about wearing.</span>
+            </p>
+            <a href="about.html">
+                <button class="read-more-btn">Read More</button>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>YESU TELA YOO</h3>
+                    <p>Elevating streetwear culture with unique designs and premium quality clothing.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/yty_yesutelayoo?igsh=MXA5d241b3Q1YjduNQ=="><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/yty_yesutelayoo?igsh=MXA5d241b3Q1YjduNQ=="><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/yesutelayoo?s=21&t=Wdsc_q2jD4sN9-Ik3enluA"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.tiktok.com/@ytyofficial?_t=ZM-8u8SmbqIhok&_r=1"><i class="fab fa-tiktok"></i></a>
+                        <a href="wa.me/256782800774"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="collection.html">Collection</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <!-- Update this line in the footer section -->
+                        <li><a href="delivery.html">Delivery Info</a></li>
+                        <li><a href="returns.html">Returns Policy</a></li>
+                        <li><a href="size-guide.html">Size Guide</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> +256 782 800 774 / +256 780 180 348</li>
+                        <li><i class="fas fa-envelope"></i> info@yesutela.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 YESU TELA YOO. All rights reserved.</p>
+            </div>
+        </footer>
+
+    <!-- At the bottom of the body tag -->
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/cart.js"></script>
+    </body>
+    </html>

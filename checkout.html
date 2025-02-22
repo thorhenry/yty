@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | YTY</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">YESU TELA YOO</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart</a>
+        </div>
+    </nav>
+
+    <main class="checkout-container">
+        <div class="checkout-wrapper">
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="order-items">
+                    <!-- Items will be dynamically inserted here -->
+                </div>
+                <div class="order-total">
+                    <div class="subtotal">
+                        <span>Subtotal</span>
+                        <span class="amount">UGX 0</span>
+                    </div>
+                    <div class="shipping">
+                        <span>Shipping</span>
+                        <span class="amount">UGX 5,000</span>
+                    </div>
+                    <div class="total">
+                        <span>Total</span>
+                        <span class="amount">UGX 0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-section">
+                <h2>Payment Method</h2>
+                <div class="payment-options">
+                    <div class="payment-option" data-provider="mtn">
+                        <img src="assets/images/mtn-money.svg" alt="MTN Mobile Money">
+                        <span>MTN Mobile Money</span>
+                    </div>
+                    <div class="payment-option" data-provider="airtel">
+                        <img src="assets/images/airtel-money.svg" alt="Airtel Money">
+                        <span>Airtel Money</span>
+                    </div>
+                </div>
+
+                <form id="payment-form" class="payment-form">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <div class="phone-input">
+                            <span class="prefix">+256</span>
+                            <input type="tel" id="phone" name="phone" placeholder="7XXXXXXXX" maxlength="9" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email (Optional)</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Delivery Address</label>
+                        <textarea id="address" name="address" required></textarea>
+                    </div>
+                    <button type="submit" class="pay-button">Pay Now</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <div class="payment-modal">
+        <div class="modal-content">
+            <h3>Complete Payment</h3>
+            <p>A payment prompt has been sent to your phone. Please enter your PIN to complete the transaction.</p>
+            <div class="loader"></div>
+            <button class="close-modal">Cancel</button>
+        </div>
+    </div>
+
+    <script src="assets/js/checkout.js"></script>
+</body>
+</html>
