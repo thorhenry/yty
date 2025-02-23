@@ -37,7 +37,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    animation: panBackground 3s infinite alternate ease-in-out;
+    animation: panBackground 5s infinite alternate ease-in-out;
 }
 
 @keyframes panBackground {
@@ -88,6 +88,10 @@ body {
     position: relative;
     z-index: 2;
     animation: fadeInUp 1.2s ease-out, floatContent 6s ease-in-out infinite;
+}
+
+.hero-content a {
+    text-decoration: none;
 }
 
 @keyframes fadeInUp {
@@ -146,6 +150,10 @@ body {
         font-size: 1.1rem;
         margin-bottom: 1.5rem;
     }
+
+    .hero-content a {
+        text-decoration: none;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -163,8 +171,11 @@ body {
         font-size: 1rem;
         margin-bottom: 1.2rem;
     }
-}
-.hero-content h1, 
+
+    .hero-content a {
+        text-decoration: none;
+    }
+} 
 .hero-content p {
     width: 100%;
     text-align: center;
